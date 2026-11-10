@@ -1,0 +1,9 @@
+[00:00] Alex Morgan: This is a fictional demonstration of the database scaling review. Let’s settle the rollout approach and assign the follow-up work.
+[00:32] Sarah Chen: A large connection pool can exhaust the database during a deployment. We need a bounded pool per application instance.
+[01:10] Alex Morgan: We decided to cap each application connection pool at 20 connections. We will measure pool wait time before increasing the limit.
+[02:05] Sarah Chen: I’ll write the connection-pool configuration guide. I will include a deployment checklist.
+[03:12] James Wilson: We should test saturation before we enable this everywhere.
+[04:10] Alex Morgan: We agreed to roll out to staging before production. We will keep the previous configuration ready for rollback.
+[05:20] James Wilson: I’ll add a database saturation load test. I’ll capture pool wait time and query latency.
+[06:05] Priya Sharma: Should we reserve a separate connection budget for background jobs?
+[07:10] Alex Morgan: That is still an open question. We need measurements before deciding.
